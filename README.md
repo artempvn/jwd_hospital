@@ -45,4 +45,4 @@ User can log in after following the link in email, which was sent automatically 
 
 ## Diagram
 
-![diagram of db](https://github.com/artempvn/jwd_hospital/main/diagram.jpg)
+![diagram of db](https://github.com/artempvn/jwd_hospital/blob/main/diagram.jpg)
