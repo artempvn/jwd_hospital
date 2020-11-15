@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>ctg</short-name>
+	<uri>customtags</uri>
+	<tag>
+		<name>date-converter</name>
+		<tag-class>by.artempvn.hospital.tag.DateConverterTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>date</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Long</type>
+		</attribute>
+	</tag>
+	<tag>
+		<name>show-user</name>
+		<tag-class>by.artempvn.hospital.tag.ShowUserTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>localeLogin</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>localeRole</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>show-patient</name>
+		<tag-class>by.artempvn.hospital.tag.ShowPatientTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>localePatient</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

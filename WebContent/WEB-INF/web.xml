@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<display-name>hospital</display-name>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/jsp/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.RuntimeException</exception-type>
+		<location>/jsp/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/jsp/error.jsp</location>
+	</error-page>
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>by.artempvn.hospital.controller.filter.EncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>role</filter-name>
+		<filter-class>by.artempvn.hospital.controller.filter.RoleFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>role</filter-name>
+		<url-pattern>/controller</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>jsp_redirect</filter-name>
+		<filter-class>by.artempvn.hospital.controller.filter.JspRedirectFilter</filter-class>
+		<init-param>
+			<param-name>INDEX_PATH</param-name>
+			<param-value>/index.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>jsp_redirect</filter-name>
+		<url-pattern>/jsp/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>current_page</filter-name>
+		<filter-class>by.artempvn.hospital.controller.filter.CurrentPageFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>current_page</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<jsp-config>
+<taglib>
+<taglib-uri>customtags</taglib-uri>
+<taglib-location>/tld/custom.tld</taglib-location>
+</taglib>
+</jsp-config>
+
+</web-app>

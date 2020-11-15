@@ -1,0 +1,161 @@
+/* Specification*/
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+/* header */
+
+.icon{
+	padding-top: 30px;
+	text-align: center;
+	color: #f00;
+}
+
+.logo{
+padding-top: 43px;
+	text-align: left;
+	color: #f00;
+}
+
+.menu {
+	font-size: 22px;
+	font-weight: 700;
+	color: #000;
+}
+
+.menu__item {
+	margin-right: 15px;
+}
+
+.form__btn {
+	background: #000;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 5px;
+	width: 125px;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding:0 10px 0;
+}
+
+.button {
+	width: auto;
+	margin-top:15px;
+	font-size: 25px;
+}
+
+.button_md {
+	width: auto;
+	margin-top:15px;
+	font-size: 20px;
+	margin: 3px 15px;
+}
+
+/* nav bar */
+
+.form__btn_menu {
+	margin: 3px 15px;
+	width: auto;
+}
+
+
+/* main */
+
+body {
+background: no-repeat;
+background-size: 100% auto;
+background-attachment:fixed;
+
+
+}
+
+main {
+	padding-bottom: 200px;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+table {
+	text-align: center;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+
+.content {
+	padding-top: 40px;
+}
+
+.center {
+	text-align: center;
+	
+}
+
+.left {
+	padding-left: 15px;
+	text-align: left;
+}
+
+.right {
+	padding-right: 50px;
+	text-align: right;
+}
+
+.shadowed {
+	background-color:rgba(255,255,255,0.35);
+	border-radius: 5px;
+	display: inline;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.form {
+	background-color:rgba(255,255,255,0.75);
+	padding:10px;
+}
+
+.form__input {
+	background: #fff;
+	font-size: 20px;
+	border-radius: 5px;
+	width: 300px;
+	padding: 5px 0;
+	border: 0;
+	padding-left: 20px;
+}
+
+.form__input_l {
+	width: 500px;
+	height: auto;
+}
+
+
+
+/* footer */
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+}
+
+.credits {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	width: 200px;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+
+
