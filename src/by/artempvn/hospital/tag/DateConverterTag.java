@@ -20,7 +20,7 @@ import by.artempvn.hospital.controller.command.SessionAttributeName;
  */
 @SuppressWarnings("serial")
 public class DateConverterTag extends TagSupport {
-	private static final int DATE_LENGTH = 5;
+	private static final int DATE_LENGTH_MAX = 6;
 	private static final String DATE_PATTERN = "dd MMMM yyyy";
 	private static final String DATE_TIME_PATTERN = "dd MMMM yyyy HH:mm";
 	private long date;
@@ -45,7 +45,7 @@ public class DateConverterTag extends TagSupport {
 		String pattern;
 		LocalDateTime localDateTime = null;
 		LocalDate localDate = null;
-		if (String.valueOf(date).length() == DATE_LENGTH) {
+		if (String.valueOf(date).length() <= DATE_LENGTH_MAX) {
 			pattern = DATE_PATTERN;
 			localDate = LocalDate.ofEpochDay(date);
 		} else {

@@ -16,6 +16,7 @@ public class SessionAttributeName {
 	public static final String PATIENT_ID = "patient_id";
 	public static final String SUCCESS_MESSAGE = "success_message";
 	public static final String DOCTOR_REMOVED_MESSAGE = "doctor_removed_message";
+	public static final String DOCTOR_LOGIN = "doctor_login";
 
 	private SessionAttributeName() {
 	}

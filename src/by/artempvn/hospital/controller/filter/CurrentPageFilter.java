@@ -67,6 +67,9 @@ public class CurrentPageFilter implements Filter {
 		} else {
 			previousCommand = addFullPath(EMPTY_COMMAND);
 		}
+		if (previousCommand!=null&&previousCommand.equalsIgnoreCase(LOGIN.name())) {
+			previousCommand = addFullPath(MAIN_COMMAND);
+		}
 		logger.log(Level.DEBUG,
 				"current: " + command + "; prev: " + previousCommand);
 		session.setAttribute(SessionAttributeName.PREVIOUS_COMMAND,

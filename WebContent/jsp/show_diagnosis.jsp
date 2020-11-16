@@ -75,8 +75,10 @@
 								<td>
 
 									<form name="ShowDoctor" method="POST" action="controller">
-										<input type="hidden" name="command" value="show_doctor" /> <input
-											type="hidden" name="login" value="${diagnosis.get(" established_doctor").login}" />
+										<input type="hidden" name="command" value="show_doctor" />
+										
+										 <input
+											type="hidden" name="login" value='${diagnosis.get("established_doctor").login}' />
 										<button class="form__btn form__btn_menu" type="submit">
 											${diagnosis.get("established_doctor").name}
 											${diagnosis.get("established_doctor").surname}</button>

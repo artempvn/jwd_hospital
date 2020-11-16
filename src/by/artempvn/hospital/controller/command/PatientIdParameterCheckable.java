@@ -23,9 +23,9 @@ public interface PatientIdParameterCheckable {
 				&& !data.getParameterValue(RequestParameterName.PATIENT_ID)[0]
 						.isBlank())
 				|| (data
-						.getSessionAttributeValue(RequestParameterName.PATIENT_ID) != null
+						.getSessionAttributeValue(SessionAttributeName.PATIENT_ID) != null
 						&& (!((String) data
-								.getSessionAttributeValue(RequestParameterName.PATIENT_ID))
+								.getSessionAttributeValue(SessionAttributeName.PATIENT_ID))
 										.isBlank()));
 	}
 
@@ -38,7 +38,7 @@ public interface PatientIdParameterCheckable {
 	default void putPatientIdAttribute(RequestData data) {
 		if (isPresentPatientIdParameter(data)) {
 			if (data.getParameterValue(RequestParameterName.PATIENT_ID) != null) {
-				data.putSessionAttribute(RequestParameterName.PATIENT_ID,
+				data.putSessionAttribute(SessionAttributeName.PATIENT_ID,
 						data.getParameterValue(RequestParameterName.PATIENT_ID)[0]);
 			}
 		} else {

@@ -29,7 +29,7 @@
 	<main class="content">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-3 center">
+				<div class="col-lg-4 center">
 					<h2 class="shadowed">
 						<fmt:message key="header" />
 					</h2>

@@ -24,7 +24,7 @@ import by.artempvn.hospital.validator.DataValidator;
  */
 public class UserServiceImpl implements UserService {
 	private static final String EMAIL_MESSAGE = "To activate your accaunt, please,"
-			+ " follow this <a target=\"_blank\" href=\"http://localhost:8080/jwd-hospital/"
+			+ " follow this <a target=\"_blank\" href=\"http://localhost:8080/hospital/"
 			+ "controller?command=activate_user&login=%s\">link</a>";
 	private static final String USER_STATUS_ACTIVATED = "activated";
 	private static final String USER_STATUS_BANNED = "banned";
@@ -154,7 +154,7 @@ public class UserServiceImpl implements UserService {
 		}
 		return checkedData;
 	}
-	
+
 	@Override
 	public boolean activateUser(String login) throws ServiceException {
 		UserDao dao = UserDaoImpl.getInstance();
